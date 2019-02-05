@@ -1,0 +1,4 @@
+TestID, Input, Expected Results, Acutal Result, Pass or Fial
+1, (3 4 5), Right, InvalidInput, Fail
+1, (5 3 4), Right, InvalidInput, Fail
+1, (1 1 1), Equilateral, InvalidInput, Fail
