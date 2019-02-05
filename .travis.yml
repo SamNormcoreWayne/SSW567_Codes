@@ -1,8 +1,12 @@
 language: python
 python:
- - "3.7"
+ - 3.7
 
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+      sudo: true
 # command to run tests
 script:
  - python -m unittest TestTriangle_Modified_Ziyu
- 
