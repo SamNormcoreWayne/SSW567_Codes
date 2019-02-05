@@ -1,11 +1,19 @@
 # -*- coding: utf-8 -*-
 """
+The objective of this assignment is for you to
+(a) develop a set of tests for an existing triangle classification program,
+(b) use those tests to find and fix defects in that program,
+and (c) report on your testing results for the Triangle problem
+
 Updated Feb 8, 2019
 The primary goal of this file is to demonstrate a simple unittest implementation
 
 @author: jrr
 @author: rk
 @author: Ziyu Zhang
+
+I have never copied code from classmates or from the Internet.
+All the codes are finished by myself except for the sentences you giving on Canvas
 """
 
 import unittest

@@ -1,12 +1,22 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Jan 14 13:44:00 2016
-Updated Jan 21, 2018
+Updated Feb 8, 2018
+
+The objective of this assignment is for you to
+(a) develop a set of tests for an existing triangle classification program,
+(b) use those tests to find and fix defects in that program,
+and (c) report on your testing results for the Triangle problem
+
 
 The primary goal of this file is to demonstrate a simple python program to classify triangles
 
 @author: jrr
 @author: rk
+@author: Ziyu
+
+I have never copied code from classmates or from the Internet.
+All the codes are finished by myself except for the sentences you giving on Canvas
 """
 
 def classifyTriangle(a,b,c):
