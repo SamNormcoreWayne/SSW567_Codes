@@ -1,12 +1,10 @@
+dist: xenial
 language: python
 python:
- - 3.7
-
-matrix:
-  include:
-    - python: 3.7
-      dist: xenial
-      sudo: true
-# command to run tests
+  - 3.7
+sudo: true
+install:
+  - pip install PrettyTable
+  - pip install requests
 script:
- - python -m unittest TestTriangle_Modified_Ziyu
+  - python -m compileall .

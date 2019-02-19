@@ -1,6 +1,0 @@
-,Test Run 1, Test Run 2, Test Run 3, Test Run 4
-Tests Planned,  All Green, No InvalidInput, Solve(5 3 4), Solve(7 8 9) and (3 3 4)
-Test Executed, All Invalid, Fail (5 3 5), Fail(7 8 9) and (3 3 4)
-Tested Passed, None, 2 / 3, 5 / 7, 7 / 7
-Defects Found, , , ,
-Defects Fixed, , , ,
