@@ -7,4 +7,4 @@ install:
   - pip install PrettyTable
   - pip install requests
 script:
-  - python -m compileall .
+  - python -m tests.TestHW04
