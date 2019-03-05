@@ -3,7 +3,7 @@ import json
 
 
 class GithubReader():
-    def __init__(self, user, pwd):
+    def __init__(self, user='SamNormcoreWayne', pwd=None):
         self.user = user
         self.pwd = pwd
         self.repos = dict()
@@ -23,11 +23,12 @@ class GithubReader():
 
     def get_respond(self, url):
         try:
-            req = requests.get(url, auth=(self.user, self.pwd))
+            req = requests.get(url)
+            # req = requests.get(url, auth=(self.user, self.pwd))
         except requests.exceptions.MissingSchema:
             print("URL wrong")
             self.url_respond = None
-            url = input("Please input the right url: ")
+            url = print("Please input the right url. ")
             return False
         else:
             self.url_respond = req
@@ -57,15 +58,15 @@ class GithubReader():
             self.repo_commits_num[repo_name] = com_num
         return self.repo_commits_num
 
-def main():
-    username = input("Input user name: ")
-    pwd = input("Input password: ")
+'''def main():
+    # username = input("Input user name: ")
+    # pwd = input("Input password: ")
 
-    sam_repo = GithubReader(user=username, pwd=pwd) 
+    sam_repo = GithubReader() 
     com_dic = sam_repo.get_commits()
     print(list(com_dic.items()))
     for repo_name, com_num in com_dic.items():
         print("Repository name: {}, commits number: {}".format(repo_name, com_num))
 
 if __name__ == '__main__':
-    main()
+    main()'''
