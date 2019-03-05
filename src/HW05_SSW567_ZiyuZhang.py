@@ -26,8 +26,8 @@ class GithubReader():
 
     def get_respond(self, url):
         try:
-            req = requests.get(url, auth=(self.user, self.pwd))
-            # req = requests.get(url)
+            # req = requests.get(url, auth=(self.user, self.pwd))
+            req = requests.get(url)
         except requests.exceptions.MissingSchema:
             print("URL wrong")
             self.url_respond = None
@@ -57,7 +57,6 @@ class GithubReader():
                 break
 
             cmt_js = self.url_respond.json()
-            print(cmt_js)
             self.repo_commits_json_dict = self.url_respond.json()
             com_num = len(cmt_js)
             # print(repo_name, len(cmt_js))
@@ -65,17 +64,17 @@ class GithubReader():
         return self.repo_commits_num
 
 def main():
-    username = input("Input user name: ")
-    pwd = input("Input password: ")
+    # username = input("Input user name: ")
+    # pwd = input("Input password: ")
 
-    sam_repo = GithubReader(user=username, pwd=pwd)
-    # sam_repo = GithubReader()
+    # sam_repo = GithubReader(user=username, pwd=pwd)
+    sam_repo = GithubReader()
     com_dic = sam_repo.get_commits()
     print(list(com_dic.items()))
     for repo_name, com_num in com_dic.items():
         print("Repository name: {}, commits number: {}".format(repo_name, com_num))
-    repo_file_dir = os.path.join(os.getcwd(), 'docs', 'GitRepoResponse_04.json')
-    commit_file_dir = os.path.join(os.getcwd(), 'docs', 'GitCommitResponse_04.json')
+    repo_file_dir = os.path.join(os.getcwd(), 'docs', 'GitRepoResponse.json')
+    commit_file_dir = os.path.join(os.getcwd(), 'docs', 'GitCommitResponse.json')
     with open(repo_file_dir, 'w') as repo_fp:
         json.dump(sam_repo.repo_json_dict, repo_fp, indent=4)
     with open(commit_file_dir, 'w') as commit_fp:
