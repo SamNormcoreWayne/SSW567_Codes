@@ -16,10 +16,10 @@ def mocked_requests_get(*args, **kwargs):
         def __init__(self, json_data, status_code):
                 self.json_data = json_data
                 self.status_code = status_code
-                self.text = json.dumps(json_data)
+                self.text = str(json_data).replace('\n', '').replace(' ', '')
 
         def json(self):
-            return json.dumps(self.json_data, indent=4)
+            return list(self.json_data)
 
     if args[0].startswith("https://api.github.com/users/"):
         return MockResponse(json.load(fp_rep), 200)
