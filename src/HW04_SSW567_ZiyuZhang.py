@@ -58,7 +58,7 @@ class GithubReader():
             self.repo_commits_num[repo_name] = com_num
         return self.repo_commits_num
 
-'''def main():
+def main():
     # username = input("Input user name: ")
     # pwd = input("Input password: ")
 
@@ -69,4 +69,4 @@ class GithubReader():
         print("Repository name: {}, commits number: {}".format(repo_name, com_num))
 
 if __name__ == '__main__':
-    main()'''
+    main()
